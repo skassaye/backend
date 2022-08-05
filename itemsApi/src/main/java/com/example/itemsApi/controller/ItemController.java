@@ -1,11 +1,11 @@
 package com.example.itemsApi.controller;
 
-import com.example.itemsApi.repository.entity.Item;
-import com.example.itemsApi.repository.entity.ItemRepository;
+import com.example.itemsApi.repository.Item;
+import com.example.itemsApi.repository.ItemRepository;
 import com.example.itemsApi.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+@CrossOrigin
 @RestController
 @RequestMapping("/item")
 public class ItemController{
@@ -40,6 +40,7 @@ public class ItemController{
     {
         Item item = itemService.findById( id );
         item.setName( itemDto.getName() );
+        item.setPrice(itemDto.getPrice());
         item.setDescription( itemDto.getDescription() );
         item.setImageUrl( itemDto.getImageUrl() );
         return itemService.save( item );

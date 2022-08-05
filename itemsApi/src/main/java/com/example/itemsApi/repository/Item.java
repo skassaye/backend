@@ -1,4 +1,4 @@
-package com.example.itemsApi.repository.entity;
+package com.example.itemsApi.repository;
 
 import com.example.itemsApi.controller.ItemDto;
 
@@ -15,6 +15,7 @@ public class Item
     private Integer id;
 
     private String name;
+    private Double price;
 
     private String description;
 
@@ -25,6 +26,7 @@ public class Item
 
     public Item(ItemDto itemDto) {
     this.name = itemDto.getName();
+    this.price =itemDto.getPrice();
     this.description = itemDto.getDescription();
     this.imageUrl = itemDto.getImageUrl();
     }
@@ -47,6 +49,15 @@ public class Item
     public void setName( String name )
     {
         this.name = name;
+    }
+
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
     public String getDescription()

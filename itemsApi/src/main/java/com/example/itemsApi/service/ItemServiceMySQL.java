@@ -1,7 +1,7 @@
 package com.example.itemsApi.service;
 
-import com.example.itemsApi.repository.entity.Item;
-import com.example.itemsApi.repository.entity.ItemRepository;
+import com.example.itemsApi.repository.Item;
+import com.example.itemsApi.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

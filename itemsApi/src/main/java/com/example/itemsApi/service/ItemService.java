@@ -1,6 +1,6 @@
 package com.example.itemsApi.service;
 
-import com.example.itemsApi.repository.entity.Item;
+import com.example.itemsApi.repository.Item;
 
 import java.util.List;
 
